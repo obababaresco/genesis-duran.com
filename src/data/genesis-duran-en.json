@@ -1,0 +1,276 @@
+[
+  {
+    "slug": "genesis-duran",
+    "nombre": "Génesis",
+    "apellido": "Durán",
+    "bio": "UX/UI Designer and visual creative.[BR]I believe in design that combines aesthetics + strategy + purpose to create digital experiences that truly work.",
+    "foto": "/images/genesis-duran/genesis.png",
+    "social": {
+      "instagram": "#",
+      "linkedin": "https://www.linkedin.com/in/g%C3%A9nesis-andreina-dur%C3%A1n-lin%C3%A1rez-9a46711b4/"
+    },
+    "whatsapp": "+584127734830",
+    "cv": "/cv/en-genesis-duran.pdf",
+    "proyectos": [
+      {
+        "title": "Turning sales data into daily decisions",
+        "description": "UX/UI design of an ordering app for restaurants, focused on a simple, clear, and frictionless purchasing experience for the end user.",
+        "tags": ["SaaS", "Dashboard", "UX/UI", "Restaurants"],
+        "image": "/images/genesis-duran/proyectos/wibo/wibo-1.png",
+        "images": ["/images/genesis-duran/proyectos/wibo/wibo-1.png", 
+          "/images/genesis-duran/proyectos/wibo/wibo-2.png", 
+          "/images/genesis-duran/proyectos/wibo/wibo-3.png"],
+        "link": "",
+        "category": "web",
+        "pais": "Chile",
+        "reto": "Simplify the ordering process to reduce friction and errors during purchase.",
+        "solucion": "Clear ordering flow, intuitive interface, and visual hierarchy focused on key actions."
+      },
+      {
+        "title": "Mobile app for ordering at restaurants",
+        "description": "Reduce friction and confusion during the restaurant ordering process from mobile devices.",
+        "tags": ["Mobile App", "UX/UI", "Foodtech"],
+        "image": "/images/genesis-duran/proyectos/app-restaurante/app-restaurante-1.png",
+        "images": ["/images/genesis-duran/proyectos/app-restaurante/app-restaurante-1.png", 
+          "/images/genesis-duran/proyectos/app-restaurante/app-restaurante-2.png", 
+          "/images/genesis-duran/proyectos/app-restaurante/app-restaurante-3.png",
+          "/images/genesis-duran/proyectos/app-restaurante/app-restaurante-4.png",
+          "/images/genesis-duran/proyectos/app-restaurante/app-restaurante-5.png"],
+        "link": "",
+        "category": "web",
+        "pais": "Chile",
+        "reto": "Simple and guided ordering flow, with clear information hierarchy and key actions.",
+        "solucion": "Clear and validatable ordering experience for end users and restaurants."
+      },
+      {
+        "title": "IT talent management system",
+        "description": "Functional design base for product validation and job opportunity presentation.",
+        "tags": ["Web Platform", "UX/UI", "Talent Tech"],
+        "image": "/images/genesis-duran/proyectos/interfell-software/interfell-software.png",
+        "images": ["/images/genesis-duran/proyectos/interfell-software/interfell-software.png"],
+        "link": "#",
+        "category": "web",
+        "pais": "Spain",
+        "reto": "Simplify vacancy and application management in the IT sector, eliminating friction for both talent and companies.",
+        "solucion": "Clear and structured platform for posting vacancies and applying in a simple and organized way."
+      },
+      {
+        "title": "Informative website for personal growth platform",
+        "description": "Clear and reliable digital presence to communicate the educational offering.",
+        "tags": ["Informative Website", "UX/UI", "Education"],
+        "image": "/images/genesis-duran/proyectos/instituto-desarrollo-interior/instituto-desarrollo-interior-1.png",
+        "images": ["/images/genesis-duran/proyectos/instituto-desarrollo-interior/instituto-desarrollo-interior-1.png",
+          "/images/genesis-duran/proyectos/instituto-desarrollo-interior/instituto-desarrollo-interior-2.png",
+          "/images/genesis-duran/proyectos/instituto-desarrollo-interior/instituto-desarrollo-interior-3.png"],
+        "link": "#",
+        "category": "web",
+        "pais": "Spain",
+        "reto": "Communicate an educational proposal clearly and accessibly, building trust across different user profiles.",
+        "solucion": "Informative website with clear hierarchy, sober visual language, and simple navigation."
+      },
+      {
+        "title": "Communicating a country brand in the FITUR context",
+        "description": "Digital support piece for institutional presence and commercial meetings during the event.",
+        "tags": ["Landing Page", "UX/UI", "Tourism", "International Event"],
+        "image": "/images/genesis-duran/proyectos/fitur/asuaire-fitur-1.png",
+        "images": ["/images/genesis-duran/proyectos/fitur/asuaire-fitur-1.png",
+          "/images/genesis-duran/proyectos/fitur/asuaire-fitur-2.png",
+          "/images/genesis-duran/proyectos/fitur/asuaire-fitur-3.png"],
+        "link": "#",
+        "category": "web",
+        "pais": "Costa Rica",
+        "reto": "Communicate the value proposition of a country brand in a competitive and high-impact fair environment like FITUR.",
+        "solucion": "Informative landing page with clear messaging, visual hierarchy, and focus on attraction and positioning."
+      },
+      {
+        "title": "Social media post about Climate Week NYC participation",
+        "description": "Coherent and visible digital presence in a global conversation about sustainability.",
+        "tags": ["Social Media", "Strategic Content", "Sustainability"],
+        "image": "/images/genesis-duran/proyectos/social/proyecto-1/proyecto-1-01.png",
+        "images": ["/images/genesis-duran/proyectos/social/proyecto-1/proyecto-1-01.png",
+          "/images/genesis-duran/proyectos/social/proyecto-1/proyecto-1-02.png",
+          "/images/genesis-duran/proyectos/social/proyecto-1/proyecto-1-03.png",
+          "/images/genesis-duran/proyectos/social/proyecto-1/proyecto-1-04.png",
+          "/images/genesis-duran/proyectos/social/proyecto-1/proyecto-1-05.png"],
+        "link": "",
+        "category": "social",
+        "pais": "",
+        "reto": "Position a sustainable brand at a global event, maintaining message coherence and international relevance.",
+        "solucion": "Content pieces aligned with the event, with educational, visual, and brand positioning focus."
+      },
+      {
+        "title": "Digital presence for personal transformation brand",
+        "description": "Consistent digital presence that reinforces the brand's message and identity.",
+        "tags": ["Social Media", "Strategic Content", "Wellness & Fitness"],
+        "image": "/images/genesis-duran/proyectos/social/proyecto-2/proyecto-2-01.png",
+        "images": ["/images/genesis-duran/proyectos/social/proyecto-2/proyecto-2-01.png",
+          "/images/genesis-duran/proyectos/social/proyecto-2/proyecto-2-02.jpg",
+          "/images/genesis-duran/proyectos/social/proyecto-2/proyecto-2-03.jpg",
+          "/images/genesis-duran/proyectos/social/proyecto-2/proyecto-2-04.jpeg",
+          "/images/genesis-duran/proyectos/social/proyecto-2/proyecto-2-05.jpeg"],
+        "link": "",
+        "category": "social",
+        "pais": "",
+        "reto": "Build a coherent and approachable digital voice to communicate personal and professional transformation processes.",
+        "solucion": "Content system aligned with the brand, with clear, motivational, and actionable messages."
+      },
+      {
+        "title": "Using social media for IT talent recruitment",
+        "description": "More relevant communication aligned with the target talent profile.",
+        "tags": ["Social Media", "Strategic Content", "IT Talent"],
+        "image": "/images/genesis-duran/proyectos/social/proyecto-3/proyecto-3-01.png",
+        "images": ["/images/genesis-duran/proyectos/social/proyecto-3/proyecto-3-01.png",
+          "/images/genesis-duran/proyectos/social/proyecto-3/proyecto-3-02.png",
+          "/images/genesis-duran/proyectos/social/proyecto-3/proyecto-3-03.png",
+          "/images/genesis-duran/proyectos/social/proyecto-3/proyecto-3-04.png"],
+        "link": "",
+        "category": "social",
+        "pais": "",
+        "reto": "Communicate IT sector vacancies and opportunities clearly and attractively, avoiding generic and undifferentiated messages.",
+        "solucion": "Clear and structured content pieces, focused on value, context, and differentiation of each opportunity."
+      },
+      {
+        "title": "Organized and recognizable digital presence on social channels",
+        "description": "Organized and recognizable digital presence on social channels.",
+        "tags": ["Social Media", "Strategic Content", "Tourism"],
+        "image": "/images/genesis-duran/proyectos/social/proyecto-4/proyecto-4-01.png",
+        "images": ["/images/genesis-duran/proyectos/social/proyecto-4/proyecto-4-01.png",
+          "/images/genesis-duran/proyectos/social/proyecto-4/proyecto-4-02.png",
+          "/images/genesis-duran/proyectos/social/proyecto-4/proyecto-4-03.png",
+          "/images/genesis-duran/proyectos/social/proyecto-4/proyecto-4-04.png",
+          "/images/genesis-duran/proyectos/social/proyecto-4/proyecto-4-05.png",
+          "/images/genesis-duran/proyectos/social/proyecto-4/proyecto-4-06.png",
+          "/images/genesis-duran/proyectos/social/proyecto-4/proyecto-4-07.png"],
+        "link": "",
+        "category": "social",
+        "pais": "",
+        "reto": "Communicate tourism services and messages clearly, coherently, and aligned with the brand identity.",
+        "solucion": "Consistent content system, with clear messages and visuals aligned with the brand."
+      },
+      {
+        "title": "Effective presentations to connect countries",
+        "description": "Effective commercial material for presentations and conversations with international clients.",
+        "tags": ["Pitch Deck", "Commercial Presentation", "International Market"],
+        "image": "/images/genesis-duran/proyectos/sales/proyecto-1/proyecto-1-01.png",
+        "images": ["/images/genesis-duran/proyectos/sales/proyecto-1/proyecto-1-01.png"],
+        "link": "",
+        "category": "sales",
+        "pais": "",
+        "reto": "Communicate a value proposition clearly and attractively for an international and multicultural market.",
+        "solucion": "Pitch deck focused on clarity, information hierarchy, and cultural adaptation of the message."
+      },
+      {
+        "title": "Presentations that cross borders",
+        "description": "Coherent and effective presentation for commercial and business meetings.",
+        "tags": ["Pitch Deck", "Commercial Presentation", "International Business"],
+        "image": "/images/genesis-duran/proyectos/sales/proyecto-2/proyecto-2-01.png",
+        "images": ["/images/genesis-duran/proyectos/sales/proyecto-2/proyecto-2-01.png",
+         "/images/genesis-duran/proyectos/sales/proyecto-2/proyecto-2-02.png",
+         "/images/genesis-duran/proyectos/sales/proyecto-2/proyecto-2-03.png",
+         "/images/genesis-duran/proyectos/sales/proyecto-2/proyecto-2-04.png"],
+        "link": "",
+        "category": "sales",
+        "pais": "",
+        "reto": "Build a clear and persuasive narrative to present a value proposition to an international market.",
+        "solucion": "Pitch deck based on a clear story, focusing on problem, value, and differentiation."
+      },
+      {
+        "title": "Better commercial understanding",
+        "description": "Organized offering ready to support sales processes and client presentations.",
+        "tags": ["Service Catalog", "Commercial Offering", "Sales"],
+        "image": "/images/genesis-duran/proyectos/sales/proyecto-3/proyecto-3-01.png",
+        "images": ["/images/genesis-duran/proyectos/sales/proyecto-3/proyecto-3-01.png",
+          "/images/genesis-duran/proyectos/sales/proyecto-3/proyecto-3-02.png",
+          "/images/genesis-duran/proyectos/sales/proyecto-3/proyecto-3-03.png",
+          "/images/genesis-duran/proyectos/sales/proyecto-3/proyecto-3-04.png",
+          "/images/genesis-duran/proyectos/sales/proyecto-3/proyecto-3-05.png",
+          "/images/genesis-duran/proyectos/sales/proyecto-3/proyecto-3-06.png",
+          "/images/genesis-duran/proyectos/sales/proyecto-3/proyecto-3-07.png"],
+        "link": "",
+        "category": "sales",
+        "pais": "",
+        "reto": "Structure a clear and understandable service offering, facilitating client comprehension and decision-making.",
+        "solucion": "Service catalog with clear hierarchy, simple language, and value-focused approach."
+      },
+      {
+        "title": "A clear message, with international reach",
+        "description": "Editorial piece that served as a vehicle for positioning and communicating a social message internationally.",
+        "tags": ["Editorial Magazine", "Positioning", "Social Message"],
+        "image": "/images/genesis-duran/proyectos/sales/proyecto-4/proyecto-4-01.png",
+        "images": ["/images/genesis-duran/proyectos/sales/proyecto-4/proyecto-4-01.png",
+          "/images/genesis-duran/proyectos/sales/proyecto-4/proyecto-4-02.png",
+          "/images/genesis-duran/proyectos/sales/proyecto-4/proyecto-4-03.png"],
+        "link": "",
+        "category": "sales",
+        "pais": "",
+        "reto": "Communicate an editorial vision centered on equity and social justice, connecting with an international audience interested in the African-American market.",
+        "solucion": "Editorial magazine with a clear and coherent narrative, focused on exalting leadership, identity, and cultural value."
+      }
+    ],
+    "recomendaciones": [
+      {
+        "autor": "Geraldine Tovitto",
+        "cargo": "Customer Success & Operations | AI Automation | Talent & Business Growth | Startups",
+        "relacion": "Directly supervised Génesis Andreina",
+        "fecha": "May 17, 2023",
+        "mensaje": "I recommend Génesis as a talented graphic designer. During our collaboration, I was able to appreciate her creative approach and her ability to develop innovative brand concepts. Génesis stands out for her active listening skills, which ensures precise execution of requirements. Additionally, she is an excellent team collaborator, with assertive communication skills and empathy, meeting established deadlines and adding her personal touch to every design she creates. I recommend Génesis as a talented and passionate professional who will leave a significant mark on any design project."
+      },
+      {
+        "autor": "Nancy Bravo",
+        "cargo": "Strategic HR Specialist | Talent Attraction, Retention and Development",
+        "relacion": "Held a position senior to Génesis Andreina, but did not directly supervise her",
+        "fecha": "April 12, 2023",
+        "mensaje": "Creative, passionate, and committed — that's how I see Genesis. I was lucky to have her valuable help on projects that greatly benefited the Talent department. She knew how to bring color to every idea. Completely satisfied with her dedication, skills, and delivery."
+      },
+      {
+        "autor": "Aurora Pérez Paz",
+        "cargo": "Co-Founder / Head of People at Interfell: Experts in the best tech talent from LATAM #SmartHiring / Head of People @Simera",
+        "relacion": "Directly supervised Génesis Andreina",
+        "fecha": "March 20, 2023",
+        "mensaje": "I had the opportunity to work with Génesis over the last 4 years, during which I witnessed her professional and personal evolution. In terms of design, her experience ranges from brand design, event piece creation, to website and landing page creation, with native design and also optimized for WordPress and HubSpot (as she understands how both CMS work). She is extremely passionate about her work, and teaming up with her was truly rewarding for me. Any agency or client will be fortunate to add her to their team."
+      },
+      {
+        "autor": "Gerson Abdiel Vera Morales",
+        "cargo": "Technology Project Management | Master's in Management | Systems Engineer | Industrial Engineer | University Professor",
+        "relacion": "Held a position senior to Génesis Andreina, but did not directly supervise her",
+        "fecha": "March 6, 2023",
+        "mensaje": "Génesis has a high creative level, always willing to propose solutions with standards of awareness and quality. She designs thinking about user experience — highly recommended as a graphic and web designer."
+      },
+      {
+        "autor": "Juanma Rodríguez",
+        "cargo": "Founder @Interfell & SVP of Product & Partner @Simera",
+        "relacion": "Directly supervised Génesis Andreina",
+        "fecha": "March 6, 2023",
+        "mensaje": "I highly recommend Génesis. For two years we designed projects that are still making an impact today. Her graphic adaptability, initiative, and commitment are exemplary."
+      },
+      {
+        "autor": "María Auxiliadora Martínez Paredes",
+        "cargo": "Project Manager | HRBP | People Management | HR and Business Management Specialist | HR | Administrator | Virtual Assistant | Business Consultant",
+        "relacion": "Held a position senior to Génesis Andreina, but did not directly supervise her",
+        "fecha": "March 6, 2023",
+        "mensaje": "Passionate, Creative, intelligent, resourceful, and she believes in what she does! Génesis worked at Interfell for the last three years. Her role while we were colleagues was key, as she contributed her experience and knowledge to the entire team with great generosity — always collaborative and at the forefront of the TOP colors and designs in the industry. If anyone has the chance to have her on their team as a designer, don't hesitate for a minute! She won't let you down. Her loyalty is invaluable."
+      },
+      {
+        "autor": "Andrea E. Pérez Rivas",
+        "cargo": "Chief Operating Officer at Interfell - Experts in the best tech talent from LATAM #SmartHiring",
+        "relacion": "Directly supervised Génesis Andreina",
+        "fecha": "March 6, 2023",
+        "mensaje": "Genesis is an excellent professional; her creativity made our brand something beautiful. Highly recommended!"
+      },
+      {
+        "autor": "Ricardo Ollarves",
+        "cargo": "Content Writer / SEO / Computer Engineer",
+        "relacion": "Worked with Génesis Andreina on the same team",
+        "fecha": "March 6, 2023",
+        "mensaje": "Pick a story and Génesis will bring it all the color it needs. She is an excellent professional and graphic designer, with experience, adaptability, and great teamwork. She has immense creativity and originality — exactly what any brand wants for their projects. Totally recommended."
+      },
+      {
+        "autor": "Daniel Juárez",
+        "cargo": "Founder @ Interfell - Chief Strategy Officer @ Simera",
+        "relacion": "Directly supervised Génesis Andreina",
+        "fecha": "March 3, 2023",
+        "mensaje": "Genesis is one of the best designers I've worked with. She has been a fundamental pillar in building and evolving the Interfell brand over the past years. She has an incredible ability to adapt to any format — whether social media, ebooks, or web. She is a committed professional with great ability to drive projects forward. 100% recommended."
+      }
+    ]
+  }
+]

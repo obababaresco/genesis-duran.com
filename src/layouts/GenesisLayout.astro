@@ -1,0 +1,818 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  whatsapp?: string;
+  linkedin?: string;
+  instagram?: string;
+  showRecommendations?: boolean;
+}
+
+const { title, whatsapp = "#", linkedin = "#", instagram = "#", showRecommendations = false } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/images/logo-.png" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <button class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="navbar-menu">
+          <li>
+            <a href="#acerca-de" class="nav-link">
+              <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span data-i18n="nav.about">Acerca de</span>
+            </a>
+          </li>
+          <li>
+            <a href="#proyectos" class="nav-link">
+              <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span data-i18n="nav.projects">Proyectos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#proceso" class="nav-link">
+              <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+              <span data-i18n="nav.process">Proceso</span>
+            </a>
+          </li>
+          {showRecommendations && (
+            <li>
+              <a href="#recomendaciones" class="nav-link">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span data-i18n="nav.recommendations">Recomendaciones</span>
+              </a>
+            </li>
+          )}
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="page-wrapper">
+      <slot />
+    </div>
+
+    <!-- Botón flotante de idioma -->
+    <button class="lang-toggle-btn" id="lang-toggle" aria-label="Switch language" title="Switch to English">
+      <span class="lang-toggle-text" id="lang-toggle-text">EN</span>
+      <svg class="lang-toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+    </button>
+
+    <footer class="footer-genesis" id="contacto">
+      <div class="footer-genesis-content">
+        <div class="footer-genesis-main">
+          <div class="footer-genesis-text">
+            <h2 class="footer-genesis-title" data-i18n="footer.title" data-i18n-html="true">
+              CADA GRAN PROYECTO<br />
+              EMPIEZA CON UNA<br />
+              BUENA CONVERSACIÓN.
+            </h2>
+            <p class="footer-genesis-subtitle" data-i18n="footer.subtitle" data-i18n-html="true">
+              Cuéntame qué necesitas y te ayudaré a<br />
+              hacerlo posible.
+            </p>
+          </div>
+          <div class="footer-genesis-social">
+            <a href={whatsapp} target="_blank" rel="noopener noreferrer" class="footer-social-link footer-social-whatsapp" aria-label="WhatsApp">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href={linkedin} target="_blank" rel="noopener noreferrer" class="footer-social-link footer-social-linkedin" aria-label="LinkedIn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-genesis-copyright">
+          <p data-i18n="footer.copyright">© 2026 Génesis Durán. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      /* Botón flotante de idioma */
+      .lang-toggle-btn {
+        position: fixed;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(43, 228, 194, 0.15);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(43, 228, 194, 0.3);
+        color: var(--color-text-white, #fff);
+        padding: 0.6rem 1rem;
+        border-radius: 50px;
+        cursor: pointer;
+        font-family: var(--font-paragraph, 'Inter', sans-serif);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .lang-toggle-btn:hover {
+        background: rgba(43, 228, 194, 0.3);
+        border-color: rgba(43, 228, 194, 0.6);
+        box-shadow: 0 4px 24px rgba(43, 228, 194, 0.25);
+        transform: translateY(-50%) scale(1.05);
+      }
+
+      .lang-toggle-icon {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+      }
+
+      .lang-toggle-text {
+        line-height: 1;
+      }
+
+      @media (max-width: 768px) {
+        .lang-toggle-btn {
+          right: 1rem;
+          top: auto;
+          bottom: 1.5rem;
+          transform: none;
+          padding: 0.5rem 0.8rem;
+          font-size: 0.75rem;
+        }
+
+        .lang-toggle-btn:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      .navbar-menu {
+        background: var(--color-bg-main);
+      }
+
+      .footer-genesis {
+        flex-shrink: 0;
+        background-color: var(--color-bg-sections);
+        padding: 0;
+        padding-top: 4rem;
+      }
+
+      .footer-genesis-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      .footer-genesis-main {
+        background-color: var(--color-bg-main);
+        border-radius: 40px 40px 0 0;
+        padding: 4rem 3rem 0 3rem;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        max-width: 100%;
+      }
+
+      .footer-genesis-text {
+        flex: 0 0 75%;
+        width: 75%;
+      }
+
+      .footer-genesis-title {
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        font-weight: 300;
+        line-height: 1.3;
+        color: var(--color-text-white);
+        margin: 0 0 1.5rem 0;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+      }
+
+      .footer-genesis-subtitle {
+        font-family: var(--font-paragraph);
+        font-size: 1.125rem;
+        font-weight: 400;
+        color: var(--color-text-white);
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .footer-genesis-social {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        width: 25%;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .footer-social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .footer-social-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .footer-social-whatsapp {
+        background-color: #25D366;
+        color: white;
+      }
+
+      .footer-social-linkedin {
+        background-color: #0077B5;
+        color: white;
+      }
+
+      .footer-social-link svg {
+        width: 28px;
+        height: 28px;
+      }
+
+      .footer-genesis-copyright {
+        text-align: center;
+        padding: 1.5rem 0 2rem;
+        background-color: var(--color-bg-main);
+      }
+
+      .footer-genesis-copyright p {
+        margin: 0;
+        font-size: 0.875rem;
+        color: var(--color-text-white);
+        opacity: 0.5;
+      }
+
+      @media (max-width: 968px) {
+        .footer-genesis-main {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 3rem 2rem;
+          border-radius: 30px 30px 0 0;
+        }
+
+        .footer-genesis-title {
+          font-size: 2rem;
+        }
+
+        .footer-genesis-text {
+          flex: 1;
+          width: 100%;
+        }
+
+        .footer-genesis-social {
+          flex: 1;
+          width: 100%;
+          justify-content: flex-start;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .footer-genesis-main {
+          max-width: 100%;
+          border-radius: 0;
+          padding: 2.5rem 1.5rem;
+        }
+
+        .footer-genesis-title {
+          font-size: 1.75rem;
+        }
+
+        .footer-genesis-subtitle {
+          font-size: 1rem;
+        }
+
+        .footer-social-link {
+          width: 48px;
+          height: 48px;
+        }
+
+        .footer-social-link svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    </style>
+
+    <script>
+      // Toggle menu móvil y detección de sección activa
+      document.addEventListener('DOMContentLoaded', () => {
+        const toggle = document.querySelector('.navbar-toggle') as HTMLButtonElement;
+        const menu = document.querySelector('.navbar-menu') as HTMLElement;
+        
+        if (toggle && menu) {
+          toggle.addEventListener('click', () => {
+            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!isExpanded));
+            menu.setAttribute('data-visible', String(!isExpanded));
+          });
+
+          // Cerrar menú al hacer clic en un enlace
+          const navLinks = menu.querySelectorAll('.nav-link');
+          navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+              toggle.setAttribute('aria-expanded', 'false');
+              menu.setAttribute('data-visible', 'false');
+            });
+          });
+
+          // Cerrar menú al hacer clic fuera
+          document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target as Node) && !toggle.contains(e.target as Node)) {
+              toggle.setAttribute('aria-expanded', 'false');
+              menu.setAttribute('data-visible', 'false');
+            }
+          });
+        }
+
+        // Detectar sección activa
+        const sections = document.querySelectorAll('section[id], header[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        // Función para actualizar el enlace activo
+        const updateActiveLink = (sectionId: string) => {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            if (href === `#${sectionId}`) {
+              link.classList.add('active');
+            }
+          });
+        };
+
+        // Función para determinar qué sección está activa basándose en la posición del scroll
+        const getActiveSection = () => {
+          const scrollOffset = 250; // Offset para considerar navbar y área de detección
+          const scrollPosition = window.scrollY + scrollOffset;
+          
+          let activeSectionId = '';
+          let closestDistance = Infinity;
+
+          sections.forEach(section => {
+            const element = section as HTMLElement;
+            const rect = element.getBoundingClientRect();
+            const sectionTop = window.scrollY + rect.top;
+            const sectionBottom = sectionTop + rect.height;
+            const sectionId = section.getAttribute('id');
+            
+            if (!sectionId) return;
+
+            // Si el scroll está dentro del rango de la sección
+            if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
+              // Calcular qué tan cerca está el scroll del inicio de la sección
+              const distance = Math.abs(scrollPosition - sectionTop);
+              if (distance < closestDistance) {
+                closestDistance = distance;
+                activeSectionId = sectionId;
+              }
+            }
+          });
+
+          // Si estamos en la parte superior de la página, activar la primera sección
+          if (window.scrollY < 100) {
+            const firstSection = sections[0];
+            if (firstSection) {
+              const firstSectionId = firstSection.getAttribute('id');
+              if (firstSectionId) {
+                return firstSectionId;
+              }
+            }
+          }
+
+          // Si no encontramos una sección activa, buscar la más cercana
+          if (!activeSectionId) {
+            sections.forEach(section => {
+              const element = section as HTMLElement;
+              const rect = element.getBoundingClientRect();
+              const sectionTop = window.scrollY + rect.top;
+              const sectionId = section.getAttribute('id');
+              
+              if (!sectionId) return;
+
+              // Si la sección está visible en el viewport
+              if (rect.top < window.innerHeight && rect.bottom > 0) {
+                const distance = Math.abs(scrollPosition - sectionTop);
+                if (distance < closestDistance) {
+                  closestDistance = distance;
+                  activeSectionId = sectionId;
+                }
+              }
+            });
+          }
+
+          return activeSectionId;
+        };
+
+        // Actualizar sección activa al hacer scroll
+        let ticking = false;
+        const updateActiveSection = () => {
+          const activeSectionId = getActiveSection();
+          if (activeSectionId) {
+            updateActiveLink(activeSectionId);
+          }
+          ticking = false;
+        };
+
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            window.requestAnimationFrame(updateActiveSection);
+            ticking = true;
+          }
+        }, { passive: true });
+
+        // Establecer sección activa inicial
+        updateActiveSection();
+      });
+    </script>
+
+    <script>
+      // ===== Sistema de traducción (i18n) =====
+      (() => {
+        // Traducciones de textos estáticos de la UI
+        const translations: Record<string, Record<string, string>> = {
+          es: {
+            // Navbar
+            'nav.about': 'Acerca de',
+            'nav.projects': 'Proyectos',
+            'nav.process': 'Proceso',
+            'nav.recommendations': 'Recomendaciones',
+            // Footer
+            'footer.title': 'CADA GRAN PROYECTO<br />EMPIEZA CON UNA<br />BUENA CONVERSACIÓN.',
+            'footer.subtitle': 'Cuéntame qué necesitas y te ayudaré a<br />hacerlo posible.',
+            'footer.copyright': '© 2026 Génesis Durán. Todos los derechos reservados.',
+            // Hero
+            'hero.greeting': 'HOLA, SOY',
+            'hero.cta': 'Hablemos de ideas',
+            'hero.cv': 'Descargar CV',
+            // Sección proyectos
+            'projects.title.line1': 'EXPERIENCIAS DISEÑADAS',
+            'projects.title.line2': 'CON PROPÓSITO.',
+            'projects.subtitle': 'Cada experiencia responde a un contexto distinto.',
+            'projects.filter.all': 'Todos los proyectos',
+            'projects.filter.web': 'Web',
+            'projects.filter.social': 'Social Media',
+            'projects.filter.sales': 'Sales',
+            'projects.view': 'Ver Proyecto →',
+            // Sección diseño
+            'design.line1': 'NO LLEGUÉ AL DISEÑO',
+            'design.line2': 'POR CASUALIDAD.',
+            'design.line3': 'LLEGUÉ BUSCANDO',
+            'design.line4': 'RESPUESTAS.',
+            'design.paragraph': 'Siempre me ha interesado entender por qué las personas hacen lo que hacen, qué las frustra, qué las confunde y qué las hace sentir tranquilas cuando interactúan con un producto digital. El diseño se convirtió para mi, en el punto donde pude unir <strong class="highlight-word" data-word="lógica">lógica</strong>, <strong class="highlight-word" data-word="sensibilidad">sensibilidad</strong> y <strong class="highlight-word" data-word="estructura">estructura</strong>.',
+            // Sección diseño para que
+            'designwork.static': 'DISEÑO PARA QUE',
+            'designwork.paragraph': 'Trabajo en UX/UI desde hace más de 6 años, principalmente en <strong>entornos remotos</strong> y multidisciplinarios. Me enfoco en simplificar lo complejo, tomar decisiones con criterio y crear experiencias que se sientan claras, humanas y posibles de usar en la vida real.',
+            'designwork.phrases': 'FUNCIONE,se entienda,no frustre,fluya',
+            // Sección proceso
+            'process.title.line1': 'ACOMPÁÑAME EN',
+            'process.title.line2': 'MI PROCESO',
+            'process.subtitle': 'Nada ocurre de golpe. Todo se construye paso a paso.',
+            'process.btn.start': 'Vamos',
+            'process.btn.back': 'Volver',
+            'process.btn.forward': 'Avanzar',
+            // Mensajes flotantes del proceso
+            'process.msg3.title': 'Pienso con:',
+            'process.msg3.items': 'UX Research,Arquitectura de información,Flujos y journeys',
+            'process.msg6.title': 'Construyo con:',
+            'process.msg6.items': 'UI Design,Design systems,Prototipos funcionales',
+            'process.msg9.title': 'Me apoyo en:',
+            'process.msg9.items': 'Figma,Photoshop,Illustrator',
+            'process.hover1': 'Observar también es avanzar',
+            'process.hover2': 'El proceso importa',
+            'process.hover4': 'Hacer las preguntas correctas cambia todo',
+            'process.hover5': 'Las respuestas no siempre son inmediatas',
+            'process.hover7': 'No todo lo que se diseña se queda',
+            'process.hover8': 'Simplificar es parte del trabajo',
+            // Recomendaciones
+            'recommendations.title': 'Recomendaciones',
+            // Modal
+            'modal.reto': 'Reto:',
+            'modal.solucion': 'Solución:',
+            'modal.visitsite': 'Visitar Sitio Web',
+          },
+          en: {
+            // Navbar
+            'nav.about': 'About',
+            'nav.projects': 'Projects',
+            'nav.process': 'Process',
+            'nav.recommendations': 'Recommendations',
+            // Footer
+            'footer.title': 'EVERY GREAT PROJECT<br />STARTS WITH A<br />GOOD CONVERSATION.',
+            'footer.subtitle': 'Tell me what you need and I\'ll help<br />make it happen.',
+            'footer.copyright': '© 2026 Génesis Durán. All rights reserved.',
+            // Hero
+            'hero.greeting': 'HI, I\'M',
+            'hero.cta': 'Let\'s talk ideas',
+            'hero.cv': 'Download CV',
+            // Sección proyectos
+            'projects.title.line1': 'EXPERIENCES DESIGNED',
+            'projects.title.line2': 'WITH PURPOSE.',
+            'projects.subtitle': 'Each experience responds to a different context.',
+            'projects.filter.all': 'All projects',
+            'projects.filter.web': 'Web',
+            'projects.filter.social': 'Social Media',
+            'projects.filter.sales': 'Sales',
+            'projects.view': 'View Project →',
+            // Sección diseño
+            'design.line1': 'I DIDN\'T COME TO DESIGN',
+            'design.line2': 'BY CHANCE.',
+            'design.line3': 'I CAME LOOKING FOR',
+            'design.line4': 'ANSWERS.',
+            'design.paragraph': 'I\'ve always been interested in understanding why people do what they do, what frustrates them, what confuses them, and what makes them feel at ease when interacting with a digital product. Design became for me the point where I could unite <strong class="highlight-word" data-word="lógica">logic</strong>, <strong class="highlight-word" data-word="sensibilidad">sensibility</strong>, and <strong class="highlight-word" data-word="estructura">structure</strong>.',
+            // Sección diseño para que
+            'designwork.static': 'I DESIGN SO IT',
+            'designwork.paragraph': 'I\'ve been working in UX/UI for over 6 years, mainly in <strong>remote environments</strong> and multidisciplinary teams. I focus on simplifying the complex, making informed decisions, and creating experiences that feel clear, human, and usable in real life.',
+            'designwork.phrases': 'WORKS,is understood,doesn\'t frustrate,flows',
+            // Sección proceso
+            'process.title.line1': 'JOIN ME ON',
+            'process.title.line2': 'MY PROCESS',
+            'process.subtitle': 'Nothing happens all at once. Everything is built step by step.',
+            'process.btn.start': 'Let\'s go',
+            'process.btn.back': 'Back',
+            'process.btn.forward': 'Forward',
+            // Mensajes flotantes del proceso
+            'process.msg3.title': 'I think with:',
+            'process.msg3.items': 'UX Research,Information architecture,Flows and journeys',
+            'process.msg6.title': 'I build with:',
+            'process.msg6.items': 'UI Design,Design systems,Functional prototypes',
+            'process.msg9.title': 'I rely on:',
+            'process.msg9.items': 'Figma,Photoshop,Illustrator',
+            'process.hover1': 'Observing is also moving forward',
+            'process.hover2': 'The process matters',
+            'process.hover4': 'Asking the right questions changes everything',
+            'process.hover5': 'Answers aren\'t always immediate',
+            'process.hover7': 'Not everything designed stays',
+            'process.hover8': 'Simplifying is part of the job',
+            // Recomendaciones
+            'recommendations.title': 'Recommendations',
+            // Modal
+            'modal.reto': 'Challenge:',
+            'modal.solucion': 'Solution:',
+            'modal.visitsite': 'Visit Website',
+          }
+        };
+
+        // Función para obtener el idioma por defecto basado en el navegador
+        const getDefaultLang = (): string => {
+          const stored = localStorage.getItem('portfolio-lang');
+          if (stored && (stored === 'es' || stored === 'en')) return stored;
+          
+          const browserLang = navigator.language || (navigator as any).userLanguage || 'es';
+          return browserLang.startsWith('en') ? 'en' : 'es';
+        };
+
+        let currentLang = getDefaultLang();
+
+        // Función para obtener traducción
+        const t = (key: string): string => {
+          return translations[currentLang]?.[key] || translations['es']?.[key] || key;
+        };
+
+        // Función para aplicar traducciones a elementos con data-i18n
+        const applyStaticTranslations = () => {
+          const elements = document.querySelectorAll('[data-i18n]') as NodeListOf<HTMLElement>;
+          elements.forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (!key) return;
+            const translation = t(key);
+            if (el.getAttribute('data-i18n-html') === 'true') {
+              el.innerHTML = translation;
+            } else {
+              el.textContent = translation;
+            }
+          });
+        };
+
+        // Función para aplicar datos del JSON traducido a los proyectos
+        const applyProjectTranslations = () => {
+          const dataScript = document.getElementById('genesis-proyectos-data');
+          const dataScriptEn = document.getElementById('genesis-proyectos-data-en');
+          if (!dataScript || !dataScriptEn) return;
+
+          const proyectosEs = JSON.parse(dataScript.textContent || '[]');
+          const proyectosEn = JSON.parse(dataScriptEn.textContent || '[]');
+          const proyectos = currentLang === 'en' ? proyectosEn : proyectosEs;
+
+          // Actualizar tarjetas de proyecto
+          const projectCards = document.querySelectorAll('.project-card');
+          projectCards.forEach((card, index) => {
+            if (index >= proyectos.length) return;
+            const p = proyectos[index];
+            
+            const titleEl = card.querySelector('.project-card-title');
+            if (titleEl) titleEl.textContent = p.title;
+            
+            const tagsContainer = card.querySelector('.project-tags');
+            if (tagsContainer && p.tags) {
+              tagsContainer.innerHTML = p.tags.map((tag: string) => 
+                `<span class="project-tag tag">${tag}</span>`
+              ).join('');
+            }
+          });
+
+          // Almacenar datos de proyectos traducidos para el modal
+          (window as any).__translatedProjects = proyectos;
+        };
+
+        // Función para aplicar traducciones de bio
+        const applyBioTranslation = () => {
+          const bioDataScript = document.getElementById('genesis-bio-data-en');
+          const bioDataScriptEs = document.getElementById('genesis-bio-data-es');
+          if (!bioDataScript || !bioDataScriptEs) return;
+
+          const bioEn = bioDataScript.textContent || '';
+          const bioEs = bioDataScriptEs.textContent || '';
+          const bio = currentLang === 'en' ? bioEn : bioEs;
+
+          const heroSubtitle = document.querySelector('.hero-subtitle-genesis') as HTMLElement;
+          if (heroSubtitle) {
+            heroSubtitle.setAttribute('data-bio', bio);
+            // Reemplazar contenido actual
+            heroSubtitle.innerHTML = bio.replace(/\[BR\]/g, '<br />');
+          }
+        };
+
+        // Función para aplicar traducciones de recomendaciones
+        const applyRecommendationTranslations = () => {
+          const recDataEs = document.getElementById('genesis-recs-data-es');
+          const recDataEn = document.getElementById('genesis-recs-data-en');
+          if (!recDataEs || !recDataEn) return;
+
+          const recsEs = JSON.parse(recDataEs.textContent || '[]');
+          const recsEn = JSON.parse(recDataEn.textContent || '[]');
+          const recs = currentLang === 'en' ? recsEn : recsEs;
+
+          const recCards = document.querySelectorAll('.recommendation-card');
+          recCards.forEach((card, index) => {
+            if (index >= recs.length) return;
+            const rec = recs[index];
+
+            const authorEl = card.querySelector('.recommendation-author');
+            if (authorEl) authorEl.textContent = rec.autor;
+
+            const roleEl = card.querySelector('.recommendation-role');
+            if (roleEl) roleEl.textContent = rec.cargo;
+
+            const dateEl = card.querySelector('.recommendation-date');
+            if (dateEl) dateEl.textContent = rec.fecha;
+
+            const relationEl = card.querySelector('.recommendation-relationship');
+            if (relationEl) relationEl.textContent = rec.relacion;
+
+            const messageEl = card.querySelector('.recommendation-message');
+            if (messageEl) messageEl.textContent = rec.mensaje;
+          });
+        };
+
+        // Función para actualizar el enlace de descarga del CV según el idioma
+        const applyCvTranslation = () => {
+          const cvBtn = document.querySelector('.btn-cv-genesis') as HTMLAnchorElement;
+          if (!cvBtn) return;
+          const cvUrl = currentLang === 'en' 
+            ? cvBtn.getAttribute('data-cv-en') 
+            : cvBtn.getAttribute('data-cv-es');
+          if (cvUrl) cvBtn.setAttribute('href', cvUrl);
+        };
+
+        // Función para actualizar las frases dinámicas de "Diseño para que"
+        const updateDynamicPhrases = () => {
+          const phrasesStr = t('designwork.phrases');
+          const phrases = phrasesStr.split(',');
+          (window as any).__i18nPhrases = phrases;
+          
+          const dynamicText = document.querySelector('.title-part-dynamic') as HTMLElement;
+          if (dynamicText) {
+            dynamicText.textContent = phrases[0];
+          }
+        };
+
+        // Función para actualizar mensajes flotantes del proceso
+        const updateProcessMessages = () => {
+          // Mensajes principales (celdas 3, 6, 9)
+          [3, 6, 9].forEach(cell => {
+            const msgEl = document.getElementById(`floating-message-${cell}`);
+            if (!msgEl) return;
+            
+            const titleEl = msgEl.querySelector('.floating-message-title');
+            if (titleEl) titleEl.textContent = t(`process.msg${cell}.title`);
+            
+            const listEl = msgEl.querySelector('.floating-message-list');
+            if (listEl) {
+              const items = t(`process.msg${cell}.items`).split(',');
+              listEl.innerHTML = items.map(item => `<li>${item.trim()}</li>`).join('');
+            }
+          });
+
+          // Mensajes hover (celdas 1, 2, 4, 5, 7, 8)
+          [1, 2, 4, 5, 7, 8].forEach(cell => {
+            const msgEl = document.getElementById(`floating-message-${cell}`);
+            if (!msgEl) return;
+            
+            const textEl = msgEl.querySelector('.floating-message-text');
+            if (textEl) textEl.textContent = t(`process.hover${cell}`);
+          });
+        };
+
+        // Función principal para aplicar todas las traducciones
+        const applyAllTranslations = () => {
+          // Actualizar lang del HTML
+          const htmlRoot = document.getElementById('html-root');
+          if (htmlRoot) htmlRoot.setAttribute('lang', currentLang);
+
+          applyStaticTranslations();
+          applyProjectTranslations();
+          applyBioTranslation();
+          applyRecommendationTranslations();
+          applyCvTranslation();
+          updateDynamicPhrases();
+          updateProcessMessages();
+        };
+
+        // Función para actualizar el botón de toggle
+        const updateToggleButton = () => {
+          const toggleText = document.getElementById('lang-toggle-text');
+          const toggleBtn = document.getElementById('lang-toggle');
+          if (toggleText) {
+            toggleText.textContent = currentLang === 'es' ? 'EN' : 'ES';
+          }
+          if (toggleBtn) {
+            toggleBtn.setAttribute('title', currentLang === 'es' ? 'Switch to English' : 'Cambiar a Español');
+          }
+        };
+
+        // Función para cambiar idioma
+        const switchLanguage = () => {
+          currentLang = currentLang === 'es' ? 'en' : 'es';
+          localStorage.setItem('portfolio-lang', currentLang);
+          applyAllTranslations();
+          updateToggleButton();
+        };
+
+        // Inicializar cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', () => {
+          const toggleBtn = document.getElementById('lang-toggle');
+          if (toggleBtn) {
+            toggleBtn.addEventListener('click', switchLanguage);
+          }
+
+          // Si el idioma detectado es inglés, aplicar traducciones
+          if (currentLang === 'en') {
+            applyAllTranslations();
+          }
+          updateToggleButton();
+
+          // Exponer función de traducción globalmente para que otros scripts la usen
+          (window as any).__i18n = {
+            t,
+            getCurrentLang: () => currentLang,
+            translations
+          };
+        });
+      })();
+    </script>
+  </body>
+</html>
