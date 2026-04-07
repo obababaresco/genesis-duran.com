@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Analytics from '@vercel/analytics/astro';
+import SpeedInsights from '@vercel/speed-insights/astro';
 
 interface Props {
   title: string;
@@ -340,6 +341,7 @@ const { title, whatsapp = "#", linkedin = "#", instagram = "#", showRecommendati
     </style>
 
     <Analytics />
+    <SpeedInsights />
     <script>
       // Toggle menu móvil y detección de sección activa
       document.addEventListener('DOMContentLoaded', () => {
